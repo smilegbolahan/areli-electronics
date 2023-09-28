@@ -65,23 +65,23 @@
                                                         <span>{{item.title}}</span>
                                                     </div>
                                                 </td>
-                                                <td class="text-center">${{item.price}}</td>
+                                                <td class="text-center">₦{{item.price}}</td>
                                                 <td class="text-center">{{ item.qty }}</td>
-                                                <td class="text-right">${% widthratio item.price 1 item.qty %}.00</td>
+                                                <td class="text-right">₦{% widthratio item.price 1 item.qty %}.00</td>
                                             </tr>
                                             {% endfor %}
 
                                             <tr>
                                                 <td colspan="3" class="text-end f-w-600">SubTotal</td>
-                                                <td class="text-right">${{cart_total_amount}}</td>
+                                                <td class="text-right">₦{{cart_total_amount}}</td>
                                             </tr>
                                             <!-- <tr>
                                                 <td colspan="3" class="text-end f-w-600">Tax</td>
-                                                <td class="text-right">$85.99</td>
+                                                <td class="text-right">₦85.99</td>
                                             </tr> -->
                                             <tr>
                                                 <td colspan="3" class="text-end f-w-600">Grand Total</td>
-                                                <td class="text-right f-w-600">${{cart_total_amount}}</td>
+                                                <td class="text-right f-w-600">₦{{cart_total_amount}}</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -97,7 +97,7 @@
                                     </div>
                                     <div class="col-md-6 text-end">
                                         <h6 class="mb-15">Total Amount</h6>
-                                        <h3 class="mt-0 mb-0 text-brand">${{cart_total_amount}}</h3>
+                                        <h3 class="mt-0 mb-0 text-brand">₦{{cart_total_amount}}</h3>
                                         <p class="mb-0 text-muted">Taxes Included</p>
                                     </div>
                                 </div>
