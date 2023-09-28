@@ -57,7 +57,7 @@ ul.row, ul.row-sm{ list-style:none; padding:0; }
 
 .list-normal{ list-style: none; padding-left:0;
   li{ padding-left:1em; margin-bottom:7px; }
-   li:before{ content: "\2022"; color: $primary;
+   li:before{ content: "\2023"; color: $primary;
       display: inline-block; width: 1em;
        margin-left: -1em
     }

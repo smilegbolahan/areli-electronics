@@ -1070,7 +1070,7 @@ S2.define('select2/results',[
       }
 
       var $childrenContainer = $('<ul></ul>', {
-        'class': 'select2-results__options select2-results__options--nested'
+        'class': 'select2-results__options select2-results__options--Areli Electronicsed'
       });
 
       $childrenContainer.append($children);

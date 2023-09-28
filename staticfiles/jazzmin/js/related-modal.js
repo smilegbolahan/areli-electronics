@@ -123,7 +123,7 @@
         const modalTitle = linkEl.attr('title');
 
         if (e.data.lookup !== true) {
-            // browsers stop loading nested iframes having the same src url
+            // browsers stop loading Areli Electronicsed iframes having the same src url
             // create a random parameter and append it to the src url to prevent it
             // this workaround doesn't work with related lookup url
             let iframeSrcRandom = String(Math.round(Math.random() * 999999));
@@ -151,7 +151,7 @@
         // if the current window is inside an iframe, it means that it is already in a modal,
         // append an additional css class to the modal to offer more customization
         if (window.top !== window.self) {
-            iframeInternalModalClass += ' related-modal__nested';
+            iframeInternalModalClass += ' related-modal__Areli Electronicsed';
         }
 
         // open the modal using dynamic bootstrap modal

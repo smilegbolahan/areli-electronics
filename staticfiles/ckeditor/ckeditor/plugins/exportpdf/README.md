@@ -92,7 +92,7 @@ See the working ["Exporting editor content to PDF"](https://ckeditor.com/docs/ck
 ## License
 
 **CKEditor 4 Export to PDF plugin** (https://ckeditor.com/ckeditor-4/)<br>
-Copyright (c) 2003-2022, [CKSource](http://cksource.com) Holding sp. z o.o. All rights reserved.
+Copyright (c) 2003-2023, [CKSource](http://cksource.com) Holding sp. z o.o. All rights reserved.
 
 CKEditor 4 export to PDF plugin is licensed under a commercial license and is protected by copyright law.
 For more details about available licensing options please contact us at sales@cksource.com.

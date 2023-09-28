@@ -92,7 +92,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('vid', shortuuid.django_fields.ShortUUIDField(alphabet='abcdefgh12345', length=10, max_length=20, prefix='ven', unique=True)),
-                ('title', models.CharField(default='Nestify', max_length=100)),
+                ('title', models.CharField(default='Areli Electronicsify', max_length=100)),
                 ('image', models.ImageField(default='vendor.jpg', upload_to=core.models.user_directory_path)),
                 ('cover_image', models.ImageField(default='', upload_to=core.models.user_directory_path)),
                 ('description', ckeditor_uploader.fields.RichTextUploadingField(blank=True, default='', null=True)),

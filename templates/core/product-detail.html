@@ -469,42 +469,9 @@
                             </div>
                         </div>
                         <div class="col-xl-3 primary-sidebar sticky-sidebar mt-30">
-                            <div class="sidebar-widget widget-delivery mb-30 bg-grey-9 box-shadow-none">
-                                <h5 class="section-title style-3 mb-20">Delivery</h5>
-                                <ul>
-                                    <li>
-                                        <i class="fi fi-rs-marker mr-10 text-brand"></i>
-                                        <span>
-                                            {{ address.address }} <br />
-                                             <br />
-                                             {% if address.status == True  %}
-                                             <span class="text-success">Verified Address </span>
-                                             {% else %}
-                                             <span class="text-danger">Unverified Address </span>
-                                             {% endif %}
-                                        </span>
-                                        <a href="{% url 'core:dashboard' %}" class="change float-end">Change</a>
-                                    </li>
-                                    <li class="hr"><span></span></li>
-                                </ul>
-                                <h5 class="section-title style-3 mb-20">Return & Warranty</h5>
-                                <ul>
-                                    <li>
-                                        <i class="fi fi-rs-shield-check mr-10 text-brand"></i>
-                                        <span> {{p.vendor.authentic_rating}}% Authentic </span>
-                                    </li>
-                                    <li>
-                                        <i class="fi fi-rs-time-forward-ten mr-10 text-brand"></i>
-                                        <span> {{p.vendor.days_return}} Days Return </span>
-                                    </li>
-                                    <li>
-                                        <i class="fi fi-rs-diploma mr-10 text-brand"></i>
-                                        <span> {{p.vendor.warranty_period}} Months Warranty </span>
-                                    </li>
-                                </ul>
-                            </div>
+                            
                             <div class="sidebar-widget widget-vendor mb-30 bg-grey-9 box-shadow-none">
-                                <h5 class="section-title style-3 mb-20">Vendor</h5>
+                                <h5 class="section-title style-3 mb-20">Brands</h5>
                                 <div class="vendor-logo d-flex mb-30">
                                     <img src="{{p.vendor.image.url}}" alt="" />
                                     <div class="vendor-name ml-15">
@@ -524,23 +491,7 @@
                                     <li><img src="{% static 'assets/imgs/theme/icons/icon-contact.svg' %}" alt="" /><strong>Contact Seller:</strong><span>{{p.vendor.contact}}</span></li>
                                     <li class="hr"><span></span></li>
                                 </ul>
-                                <div class="d-flex justify-content-between">
-                                    <div>
-                                        <p class="text-brand font-xs">Rating</p>
-                                        <h4 class="mb-0">92%</h4>
-                                    </div>
-                                    <div>
-                                        <p class="text-brand font-xs">Ship on time</p>
-                                        <h4 class="mb-0">{{p.vendor.shipping_on_time}}%</h4>
-                                    </div>
-                                    <div>
-                                        <p class="text-brand font-xs">Chat response</p>
-                                        <h4 class="mb-0">{{p.vendor.chat_resp_time}}%</h4>
-                                    </div>
-                                </div>
-                                <ul>
-                                    <li class="hr"><span></span></li>
-                                </ul>
+                                
                                
                             </div>
                             
