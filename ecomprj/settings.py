@@ -20,7 +20,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 #DATABASE_URL = "postgresql://postgres:R6aBfeT16h5iQcQz9K09@containers-us-west-173.railway.app:6919/railway"
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
@@ -30,8 +29,8 @@ SECRET_KEY = 'django-insecure-%o9!c3rf02q6usr!vw^s96^t*(dsv&ezbs)_u_k7^z1oa$ik0r
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
-#CSRF_TRUSTED_ORIGINS = ['https://web-production-92f3.up.railway.app/']
+ALLOWED_HOSTS = ["https://*.web-production-92f3.up.railway.app/", "*"]
+CSRF_TRUSTED_ORIGINS = ['https://web-production-92f3.up.railway.app/']
 
 # Application definition
 
@@ -96,15 +95,16 @@ WSGI_APPLICATION = 'ecomprj.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 '''
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -116,11 +116,12 @@ DATABASES = {
     }
 }
 
-
+'''
 DATABASES = {
     "default": dj_database_url.config(default=DATABASE_URL, conn_max_age=1800),
 }
 '''
+
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
