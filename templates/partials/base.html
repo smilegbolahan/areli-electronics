@@ -111,7 +111,7 @@
                                 <div class="font-xs">
                                     <ul>
                                         <li class="mb-5">Vendor: <span class="text-brand">Areli Electronics</span></li>
-                                        <li class="mb-5">MFG:<span class="text-brand"> Jun 4.2023</span></li>
+                                        
                                     </ul>
                                 </div>
                             </div>
@@ -143,9 +143,9 @@
                         <div class="text-center">
                             <div id="news-flash" class="d-inline-block">
                                 <ul>
-                                    <li>100% Secure delivery without contacting the courier</li>
-                                    <li>Supper Value Deals - Save more with coupons</li>
-                                    <li>Trendy 25silver jewelry, save up 35% off today</li>
+                                    <li>Welcome to Areli electronics</li>
+                                    <li>Get quality products</li>
+                                    <li>Fast delivery</li>
                                 </ul>
                             </div>
                         </div>
@@ -179,7 +179,7 @@
             <div class="container">
                 <div class="header-wrap">
                     <div class="logo logo-width-1">
-                        <a href="index.html"><img src="{% static 'assets/imgs/theme/areli.jpg' %}" alt="logo" /></a>
+                        <a href="/"><img src="{% static 'assets/imgs/theme/areli.jpg' %}" alt="logo" /></a>
                     </div>
                     <div class="header-right">
                         <div class="search-style-2">
@@ -203,29 +203,7 @@
 
                             </form>
                         </div>
-                        <div class="header-action-right">
-                            <div class="header-action-2">
-                                <div class="search-location">
-                                    <form action="#">
-                                        <select class="select-active">
-                                            <option>Your Location</option>
-                                            <option>Alabama</option>
-                                            <option>Alaska</option>
-                                            <option>Arizona</option>
-                                            <option>Delaware</option>
-                                            <option>Florida</option>
-                                            <option>Georgia</option>
-                                            <option>Hawaii</option>
-                                            <option>Indiana</option>
-                                            <option>Maryland</option>
-                                            <option>Nevada</option>
-                                            <option>New Jersey</option>
-                                            <option>New Mexico</option>
-                                            <option>New York</option>
-                                        </select>
-                                    </form>
-                                </div>
-                                <!-- <div class="header-action-icon-2">
+                             <!-- <div class="header-action-icon-2">
                                     <a href="shop-compare.html">
                                         <img class="svgInject" alt="Areli Electronics" src="{% static 'assets/imgs/theme/icons/icon-compare.svg' %}" />
                                         <span class="pro-count blue ">3</span>
@@ -313,9 +291,9 @@
 
                                     </li>
 
-                                    <li class="hot-deals"><img src="{% static 'assets/imgs/theme/icons/icon-hot.svg' %}" alt="hot deals" /><a href="{% url 'core:product-list' %}">Deals</a></li>
+                                    <li class="hot-deals"><img src="{% static 'assets/imgs/theme/icons/icon-hot.svg' %}" alt="hot deals" /><a href="#myTab">Deals</a></li>
                                     <li>
-                                        <a href="shop-grid-right.html">Category <i class="fi-rs-angle-down"></i></a>
+                                        <a href="#">Category <i class="fi-rs-angle-down"></i></a>
                                         <ul class="sub-menu">
                                             {% for c in categories %}
                                             <li><a href="{% url 'core:category-product-list' c.cid %}">{{c.title}}</a></li>
@@ -567,11 +545,14 @@
                                 <h2 class="mb-20">
                                     Get quality  <br /> electronics
                                 </h2>
+                                
                                 <p class="mb-45">Shop with us<span class="text-brand"> Areli electronics</span></p>
                                 <form class="form-subcriber d-flex">
                                     <input type="email" placeholder="Your emaill address" />
                                     <button class="btn" type="submit">Subscribe</button>
+                                    
                                 </form>
+                                
                             </div>
                             
                         </div>
@@ -633,7 +614,7 @@
                             </div>
                             <div class="banner-text">
                                 <h3 class="icon-box-title">Good customer service</h3>
-                                <p>quick response</p>
+                                <p>Quick response</p>
                             </div>
                         </div>
                     </div>
@@ -657,13 +638,13 @@
                     <div class="col">
                         <div class="widget-about font-md mb-md-3 mb-lg-3 mb-xl-0">
                             <div class="logo mb-30">
-                                <a href="index.html" class="mb-15"><img src="{% static 'assets/imgs/theme/areli.jpg' %}" alt="logo" /></a>
-                                <p class="font-lg text-heading">Awesome </p>
+                                <a href="/" class="mb-15"><img src="{% static 'assets/imgs/theme/areli.jpg' %}" alt="logo" /></a>
+                                
                             </div>
                             <ul class="contact-infor">
-                                <li><img src="{% static 'assets/imgs/theme/icons/icon-location.svg' %}" alt="" /><strong>Address: </strong> <span>Portharcourt, Nigeria</span></li>
-                                <li><img src="{% static 'assets/imgs/theme/icons/icon-contact.svg' %}" alt="" /><strong>Call Us:</strong><span>(+234) 8066229620</span></li>
-                                <li><img src="{% static 'assets/imgs/theme/icons/icon-email-2.svg' %}" alt="" /><strong>Email:</strong><span><a href="">info@areliservices.com</a></span></li>
+                                <li><img src="{% static 'assets/imgs/theme/icons/icon-location.svg' %}" alt="" /><strong>Address: </strong> <span> Portharcourt, Nigeria</span></li>
+                                <li><img src="{% static 'assets/imgs/theme/icons/icon-contact.svg' %}" alt="" /><strong>Call Us: </strong><span> (+234) 8066229620</span></li>
+                                <li><img src="{% static 'assets/imgs/theme/icons/icon-email-2.svg' %}" alt="" /><strong>Email: </strong><span><a href=""> info@areliservices.com</a></span></li>
                                
                             </ul>
                         </div>
@@ -704,21 +685,27 @@
                         <img src="{% static 'assets/imgs/theme/icons/phone-call.svg' %}" alt="hotline" />
                         <p>(+234) 8066229620</p>
                     </div>
-                    <div class="hotline d-lg-inline-flex">
-                        <img src="{% static 'assets/imgs/theme/icons/phone-call.svg' %}" alt="hotline" />
-                        <p>(+234) 8066229620</p>
-                    </div>
+                    
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 text-end d-none d-md-block">
                     <div class="mobile-social-icon">
                         <h6>Follow Us</h6>
-                        <a href="#"><img src="{% static 'assets/imgs/theme/icons/icon-facebook-white.svg' %}" alt="" />Facebook</a>
-                        <a href="#"><img src="{% static 'assets/imgs/theme/icons/icon-twitter-white.svg' %}" alt="" />Twitter</a>
-                        <a href="#"><img src="{% static 'assets/imgs/theme/icons/icon-instagram-white.svg' %}" alt="" />Instagram</a>
+                        <p><a href="https://web.facebook.com/AreliElectronics"><img src="{% static 'assets/imgs/theme/icons/icon-facebook-white.svg' %}" alt="" /></a></p>
+                        &nbsp;
+                        &nbsp;
+                        <p><a href="#"><img src="{% static 'assets/imgs/theme/icons/icon-twitter-white.svg' %}" alt="" /></a></p>
+                        &nbsp;
+                        &nbsp;
+                        <p><a href="https://instagram.com/areli_electronics?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"><img src="{% static 'assets/imgs/theme/icons/icon-instagram-white.svg' %}" alt="" /></a></p>
+                        &nbsp;
+                        &nbsp;
+                        <p><a href="#"><img src="{% static 'assets/imgs/theme/icons/icon-youtube-white.svg' %}" alt="" /></a></p>
+                        &nbsp;
+                        &nbsp;
                         
-                        <a href="#"><img src="{% static 'assets/imgs/theme/icons/icon-youtube-white.svg' %}" alt="" />YouTube</a>
+                        
                     </div>
-                    <p class="font-sm">Up to 15% discount on your first subscribe</p>
+                    
                 </div>
             </div>
         </div>

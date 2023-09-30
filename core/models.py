@@ -57,7 +57,7 @@ class Tags(models.Model):
 class Vendor(models.Model):
     vid = ShortUUIDField(unique=True, length=10, max_length=20, prefix="ven", alphabet="abcdefgh12345")
 
-    title = models.CharField(max_length=100, default="Areli Electronicsify")
+    title = models.CharField(max_length=100, default="")
     image = models.ImageField(upload_to=user_directory_path, default="vendor.jpg")
     cover_image = models.ImageField(upload_to=user_directory_path, default="")
     # description = models.TextField(null=True, blank=True, default="I am am Amazing Vendor")
@@ -83,9 +83,9 @@ class Product(models.Model):
 
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, related_name="category")
-    brand = models.ForeignKey(Vendor, on_delete=models.SET_NULL, null=True, related_name="product")
+    vendor = models.ForeignKey(Vendor, on_delete=models.SET_NULL, null=True, related_name="product")
 
-    title = models.CharField(max_length=100, default="enter product title")
+    title = models.CharField(max_length=100, default="")
     image = models.ImageField(upload_to=user_directory_path, default="")
     # description = models.TextField(null=True, blank=True, default="This is the product")
     description = RichTextUploadingField(null=True, blank=True, default="This is the product")
@@ -100,7 +100,7 @@ class Product(models.Model):
 
     # tags = models.ForeignKey(Tags, on_delete=models.SET_NULL, null=True)
 
-    product_status = models.CharField(choices=STATUS, max_length=10, default="in_review")
+    product_status = models.CharField(choices=STATUS, max_length=10, default="published")
 
     status = models.BooleanField(default=True)
     in_stock = models.BooleanField(default=True)
