@@ -212,17 +212,6 @@
                                 </div> -->
                                 
                                 <div class="header-action-icon-2">
-                                    <a href="{% url 'core:wishlist' %}">
-                                        <img class="svgInject" alt="Nest" src="{% static 'assets/imgs/theme/icons/icon-heart.svg' %}" />
-                                        {% if request.user.is_authenticated %}
-                                        <span class="pro-count blue">{{ wishlist.count }}</span>
-                                        {% else %}
-                                        <span class="pro-count blue">0</span>
-                                        {% endif %}
-                                    </a>
-                                    <a href="{% url 'core:wishlist' %}"><span class="lable">Wishlist</span></a>
-                                </div>
-                                <div class="header-action-icon-2">
                                     <a class="mini-cart-icon" href="{% url 'core:cart' %}">
                                         <img alt="Nest" src="{% static 'assets/imgs/theme/icons/icon-cart.svg' %}" />
                                         <span class="pro-count blue cart-items-count">{{ request.session.cart_data_obj|length }}</span>
@@ -247,10 +236,14 @@
                                     <div class="cart-dropdown-wrap cart-dropdown-hm2 account-dropdown">
                                         <ul>
                                             <li><a href="{% url 'core:dashboard' %}"><i class="fi fi-rs-user mr-10"></i>My Account</a></li>
+                                            <!--
                                             <li><a href="{% url 'useradmin:dashboard' %}"><i class="fi fi-rs-user mr-10"></i>Admin Dashboard</a></li>
                                             <li><a href="page-account.html"><i class="fi fi-rs-location-alt mr-10"></i>Order Tracking</a></li>
+                                            -->
                                             <!-- <li><a href="page-account.html"><i class="fi fi-rs-label mr-10"></i>My Voucher</a></li> -->
+                                            <!--
                                             <li><a href="{% url 'core:wishlist' %}"><i class="fi fi-rs-heart mr-10"></i>My Wishlist</a></li>
+                                            -->
                                             <li><a href="{% url 'core:dashboard' %}"><i class="fi fi-rs-settings-sliders mr-10"></i>Setting</a></li>
                                             {% if request.user.is_authenticated %}
                                             <li><a href="{% url 'userauths:sign-out' %}"><i class="fi fi-rs-sign-out mr-10"></i>Sign out</a></li>
@@ -304,7 +297,7 @@
 
                                     </li>
 
-                                    <li class="hot-deals"><img src="{% static 'assets/imgs/theme/icons/icon-hot.svg' %}" alt="hot deals" /><a href="#myTab">Deals</a></li>
+                                    <li class="hot-deals"><img src="{% static 'assets/imgs/theme/icons/icon-hot.svg' %}" alt="hot deals" /><a href="/category">Deals</a></li>
                                     <li>
                                         <a href="#">Category <i class="fi-rs-angle-down"></i></a>
                                         <ul class="sub-menu">
@@ -401,9 +394,20 @@
                                         </ul>
                                     </li>
                                 -->
+                                <!--
                                     <li>
                                         <a href="{% url 'core:contact' %}">Contact</a>
                                     </li>
+                                -->
+                                <li><a href="/about_us/">About Us</a></li>
+                                <li><a href="{% url 'userauths:sign-in' %}">Sign In</a></li>
+                                {% if request.user.is_authenticated %}
+                                
+                                <li><h6>Hello {{request.user}}</h6> <a href="{% url 'userauths:sign-out' %}"><i class="fi fi-rs-sign-out mr-10"></i>Sign out</a></li>
+                                {% else %}
+                                <li><a href="{% url 'userauths:sign-in' %}"><i class="fi fi-rs-sign-in mr-10"></i>Sign In</a></li>
+                                {% endif %}
+                                
                                 </ul>
                             </nav>
                         </div>
@@ -484,40 +488,30 @@
                                 
                             </li>
                             <li class="menu-item-has-children">
-                                <a href="#myTabContent">shop</a>
+                                <a href="/category/">Our categories</a>
                                
                             </li>
-                            <li class="menu-item-has-children">
-                                <a href="#">Brands</a>
-                                <ul class="dropdown">
-                                    <li><a href="">Samsung</a></li>
-                                    <li><a href="">Binatone</a></li>
-                                    <li><a href="">TCL</a></li>
-                                    <li><a href="">AEON</a></li>
-                                    <li><a href="">Scanfrost</a></li>
-                                    <li><a href="">Syinix</a></li>
-                                </ul>
-                            </li>
+                            
                             <li class="menu-item-has-children">
                                 <a href="#">Products</a>
-                                <ul class="dropdown">
-                                    <li class="menu-item-has-children">
-                                        
+                                
                                         <ul class="dropdown">
-                                            <li><a href="#">Air Conditioners</a></li>
-                                            <li><a href="#">Audio</a></li>
-                                            <li><a href="#">Fans</a></li>
-                                            <li><a href="#">Television</a></li>
-                                            <li><a href="#">Freezers</a></li>
-                                            <li><a href="#">Gas cookers</a></li>
-                                            <li><a href="#">Refrigerators</a></li>
-                                            <li><a href="#">Kitchen appliances</a></li>
+                                            <li><a href="/category/cat21hhda5b5e/">Air Conditioners</a></li>
+                                            <li><a href="/category/cat5423c3hf5e/">Audio</a></li>
+                                            <li><a href="/category/cat4c21ffcg11/">Blenders</a></li>
+                                            <li><a href="/category/cat441fc1dagc/">Fans</a></li>
+                                            <li><a href="/category/cat31dffbfe1e/">Gas cookers</a></li>
+                                            <li><a href="/category/cat54g555dfbe/">Freezers</a></li>
+                                            <li><a href="/category/cat52af3afd2h/">Television</a></li>
+                                            <li><a href="/category/cat45b55fgh31/">Camera</a></li>
+                                            
+                                            <li><a href="category/cat23g4bg5e15/">Refrigerators</a></li>
+                                            
                                         </ul>
                                      
-                                    </li>
                                     
                                     
-                                </ul>
+                                    
                             </li>
                             
                         </ul>
@@ -527,10 +521,18 @@
                 <div class="mobile-header-info-wrap">
                     
                     <div class="single-mobile-header-info">
-                        <a href=""><i class="fi-rs-user"></i>Log In / Sign Up </a>
+                        {% if request.user.is_authenticated %}
+                        
+                                <h6><i class="fi-rs-user"></i> Hello {{request.user}}</h6> <a href="{% url 'userauths:sign-out' %}"><i class="fi fi-rs-sign-out mr-10"></i>Sign out</a>
+                                {% else %}
+                                <a href="{% url 'userauths:sign-in' %}"><i class="fi fi-rs-sign-in mr-10"></i>Sign In</a>
+                                {% endif %}
+
+                        
                     </div>
+                    <br>
                     <div class="single-mobile-header-info">
-                        <a href="#"><i class="fi-rs-headphones"></i>(+234) 8066229620 </a>
+                        <a href="#"><i class="fi-rs-headphones"></i>Call us: (+234) 8066229620 </a>
                     </div>
                 </div>
                 
@@ -665,18 +667,19 @@
                     <div class="footer-link-widget col">
                         <h4 class="widget-title">Company</h4>
                         <ul class="footer-list mb-sm-5 mb-md-0">
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Delivery Information</a></li>
                             
+                            <!--
                             <li><a href="#">Contact Us</a></li>
+                            -->
+                            <li><a href="/about_us/">About Us</a></li>
                             
                         </ul>
                     </div>
                     <div class="footer-link-widget col">
                         <h4 class="widget-title">Account</h4>
                         <ul class="footer-list mb-sm-5 mb-md-0">
-                            <li><a href="#">Sign In</a></li>
-                            <li><a href="#">View Cart</a></li>
+                            <li><a href="{% url 'userauths:sign-in' %}">Sign In</a></li>
+                            <li><a href="{% url 'core:cart' %}">View Cart</a></li>
                             
                         </ul>
                     </div>
