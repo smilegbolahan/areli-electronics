@@ -153,7 +153,7 @@
                     <div class="col-xl-3 col-lg-4">
                         <div class="header-info header-info-right">
                             <ul>
-                                <li>Need help? Call Us: <strong class="text-brand"> (+234) 8066229620</strong></li>
+                                <li>Need help? Call Us: <strong class="text-brand">  01-2815064</strong><strong class="text-brand">  08129042743</strong></li>
                                 <li>
                                     <a class="language-dropdown-active" href="#">Follow us<i class="fi-rs-angle-small-down"></i></a>
                                     <ul class="language-dropdown">
@@ -399,22 +399,24 @@
                                         <a href="{% url 'core:contact' %}">Contact</a>
                                     </li>
                                 -->
-                                <li><a href="/about_us/">About Us</a></li>
-                                <li><a href="{% url 'userauths:sign-in' %}">Sign In</a></li>
+                                
+                                
                                 {% if request.user.is_authenticated %}
                                 
                                 <li><h6>Hello {{request.user}}</h6> <a href="{% url 'userauths:sign-out' %}"><i class="fi fi-rs-sign-out mr-10"></i>Sign out</a></li>
                                 {% else %}
                                 <li><a href="{% url 'userauths:sign-in' %}"><i class="fi fi-rs-sign-in mr-10"></i>Sign In</a></li>
                                 {% endif %}
+
                                 
                                 </ul>
+                                
                             </nav>
                         </div>
                     </div>
                     <div class="hotline d-none d-lg-flex">
                         <img src="{% static 'assets/imgs/theme/icons/icon-headphone.svg' %}" alt="hotline" />
-                        <p>(+234) 8066229620<span>24/7 Support Center</span></p>
+                        <p><strong class="text-brand">  01-2815064</strong> <span style="color:black">or</span>&nbsp;<strong class="text-brand">  08129042743</strong><span>24/7 Support Center</span></p>
                     </div>
                     <div class="header-action-icon-2 d-block d-lg-none">
                         <div class="burger-icon burger-icon-white">
@@ -519,6 +521,10 @@
                                 <a href="/about_us/">About Us</a>
                                
                             </li>
+                            <li class="menu-item-has-children">
+                                <a href="/privacy/">Privacy</a>
+                               
+                            </li>
                         </ul>
                     </nav>
                     <!-- mobile menu end -->
@@ -537,7 +543,8 @@
                     </div>
                     
                     <div class="single-mobile-header-info">
-                        <a href="#"><i class="fi-rs-headphones"></i>Call us: (+234) 8066229620 </a>
+                        <a href="#"><i class="fi-rs-headphones"></i>Call us: <strong>01-2815064</strong> or <strong>08129042743</strong></a>
+                        
                     </div>
                 </div>
                 
@@ -663,7 +670,9 @@
                             </div>
                             <ul class="contact-infor">
                                 <li><img src="{% static 'assets/imgs/theme/icons/icon-location.svg' %}" alt="" /><strong>Address: </strong> <span> Portharcourt, Nigeria</span></li>
-                                <li><img src="{% static 'assets/imgs/theme/icons/icon-contact.svg' %}" alt="" /><strong>Call Us: </strong><span> (+234) 8066229620</span></li>
+                                <li><img src="{% static 'assets/imgs/theme/icons/icon-contact.svg' %}" alt="" /><strong>Call Us: </strong><span> 01-2815064
+                                    or
+                                      08129042743</span></li>
                                 <li><img src="{% static 'assets/imgs/theme/icons/icon-email-2.svg' %}" alt="" /><strong>Email: </strong><span><a href=""> info@areliservices.com</a></span></li>
                                
                             </ul>
@@ -677,7 +686,9 @@
                             <li><a href="#">Contact Us</a></li>
                             -->
                             <li><a href="/about_us/">About Us</a></li>
-                            
+                            <li><a href="/privacy/">Privacy</a></li>
+                            <li><a href="/terms_of_service/">Terms of service</a></li>
+                            <li><a href="/shipping/">Shipping</a></li>
                         </ul>
                     </div>
                     <div class="footer-link-widget col">
@@ -704,7 +715,9 @@
                 <div class="col-xl-4 col-lg-6 text-center d-none d-xl-block">
                     <div class="hotline d-lg-inline-flex mr-30">
                         <img src="{% static 'assets/imgs/theme/icons/phone-call.svg' %}" alt="hotline" />
-                        <p>(+234) 8066229620</p>
+                        <p>01-2815064
+                            or
+                              08129042743</p>
                     </div>
                     
                 </div>

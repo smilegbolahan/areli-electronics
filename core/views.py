@@ -515,6 +515,11 @@ def ajax_contact_form(request):
 def about_us(request):
     return render(request, "core/about_us.html")
 
+def shipping(request):
+    return render(request, "core/shipping.html")
+
+def privacy(request):
+    return render(request, "core/privacy.html")
 
 def purchase_guide(request):
     return render(request, "core/purchase_guide.html")
